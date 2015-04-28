@@ -4,12 +4,17 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 )
 
 func main() {
-	port := "3000"
+	port := os.Getenv("PORT")
 
-	fmt.Printf("Starting server on port %s... Go ahead and check it out :)\n", port)
+	if port == "" {
+		port = "3000"
+	}
+
+	fmt.Printf("Starting server on port %s\n", port)
 	http.HandleFunc("/", rootRoute)
 	http.ListenAndServe(":"+port, nil)
 }
