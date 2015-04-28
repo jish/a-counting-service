@@ -1,1 +1,1 @@
-web: a_counting_service
+web: a-counting-service
