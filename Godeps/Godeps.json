@@ -1,5 +1,5 @@
 {
-	"ImportPath": "a_counting_serice",
+	"ImportPath": "a-counting-service",
 	"GoVersion": "go1.4.2",
 	"Deps": []
 }
